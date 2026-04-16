@@ -1,0 +1,69 @@
+
+# 문자열의 format() 함수
+string_a = "{}".format(10)
+print(string_a, type(string_a))
+
+format_a = "{}".format(5000)
+print(format_a)
+format_b="{}{}{}".format(1,"유재석",True) # {} 개수와 자료개수가 일치해야 한다. {}가 적으면 ?, {}가 많으면 오류
+print(format_b)
+
+# 특정 칸에 출력하기  , {:자리수d} d만큼 자리 차지
+output_a = "{:5d}".format(52)  # {} 안에 공백 주의
+print(output_a)
+
+output_b = "{:05d}".format(52) #00052
+print(output_b)
+
+output_c = "{:+5d}".format(52)
+print(output_c)
+
+output_c = "{:+5d}".format(-52)
+print(output_c)
+
+
+# 부동 소수점 출력하기
+output_d = "{:15f}".format(52.273)
+print(output_d)
+
+output_d = "{:+015f}".format(52.273)
+print(output_d)
+
+output_f = "{:15.3f}".format(52.2736)    # 짤린부분의 올림이 됨
+print(output_f)
+
+# 의미없는 소수점 제거하기
+output_g = "{:g}".format(52.0)
+print(type(output_g))
+
+# 대소문자 바꾸기
+a = "Hello"
+print(a.upper())
+print(a.lower())
+
+# 공백 제거하기 , strip() : 양쪽 공백 제거 , 왼쪽 (lstrip) , 오른쪽 (rstrip)
+b = "    안녕하세요  "
+print(b.rstrip())
+
+# 문자열 찾기
+out_a = "안녕안녕하세요".find("안녕")
+print(out_a)
+out_f = "안녕안녕하세요".rfind("안녕")
+print(out_f)
+
+print( "안녕"in" 안녕하세여")
+print("잘자" in "안녕하세요")
+
+# 문자열 자르기
+out_c ="10 20 30 40 50".split(" ")
+print(out_c)
+
+#f-문자열 vs .format()
+print(f"{10}")
+print("{}".format(10))
+
+pi = 3.141592
+r = int(input("반지름 : "))
+
+부피 = print((4/3)*(r**3)*pi)
+겉넓이 = print(4*pi*(r**2))
