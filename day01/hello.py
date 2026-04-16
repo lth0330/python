@@ -9,4 +9,30 @@ print(" hello cording python")
 import keyword
 print(keyword.kwlist)
 
+
 # 식별자 : 이름을 붙인 단어 , 변수명/함수명/클래스명 등등
+
+
+print("1", 2)
+print(" # 하나만 출력", )
+print() # 빈 줄 출력
+
+print(10,20,30,40)
+
+# 터미널에서 실행 중일때 Exit() 사용
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
