@@ -111,3 +111,26 @@ print([list_a, list_a])
 
 
 
+# list_a = [0,1,2,3,4,5,6,7]
+# list_a.extend(list_a)
+# print(list_a)
+
+# numbers = [1,2,3,4,5,6,7,8,9]
+# output = [[],[],[]]
+
+# for i in numbers :
+#   output[i%3-1].append(i)
+
+# print(output)
+
+
+# numbers = [1,2,3,4,5,6,7,8,9]  # 9개
+# range(0,len(numbers)//2)
+# for i in range(0,len(numbers)//2):
+#   j =
+#   print(f"i = {i}, j = {j}")
+#   numbers[j] = numbers**2
+
+# print(numbers)
+
+
