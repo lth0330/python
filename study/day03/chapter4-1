@@ -39,3 +39,42 @@ print(list_a)
 list_a.insert(1, 1.5)  # 1번 인덱스에 1.5 삽입 시 원래의 1번 인덱스부터 끝 인덱스까지 뒤로 한칸씩 밀림 
 print(list_a)
 
+# 리스트에 요소 제거 
+list_a = [1,2,3,4,5]
+
+# [6] del 리스트명 [인덱스]   - 삭제
+del list_a[2]
+print(list_a)
+
+# [7] 리스트명.pop(인덱스)  - 삭제
+list_a.pop(3)
+print(list_a)
+list_a.pop()    # 인덱스를 안넣으면 마지막 요소 삭제
+print(list_a)
+
+# [8] 슬라이싱이란? 인덱스로 구성된 자료들 (문자열/리스트)의 요소 선택 기능
+# [시작 인덱스 : 끝인덱스 : 단계]  // 반복문처럼 
+print(list_a[::-1])   # 단계에 음시 대입시 역순으로 출력
+print(list_a[::2])    # 단계에 2를 넣었으니 0부터 2칸씩 이동 
+
+# [9] 리스트명.remove(자료)  - 인덱스가 아닌 자료를 선택해서 자료가 존재하면 삭제
+list_a.remove(1)  
+print(list_a)
+
+# [10] 리스트명.clear()   -- 리스트 안의 전체 요소 삭제
+list_a.clear()
+print(list_a)
+
+# [11] .sort() -올림차순 리스트 정렬 , .sort(reverse=Ture)- 내림차순
+
+list_a = [52,273,103,32]
+list_a.sort()   # 올림차순 
+print(list_a)
+
+list_a.sort(reverse=True) # 내림차순
+print(list_a)
+
+# [12] in, 내부에 있는지 확인   ,  요소 in 리스트명
+print(103 in list_a)
+print(50 in list_a)
+print(50 not in list_a) # 부정문 추가 가능 (결과 반대로)
