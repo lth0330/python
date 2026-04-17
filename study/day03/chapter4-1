@@ -78,3 +78,36 @@ print(list_a)
 print(103 in list_a)
 print(50 in list_a)
 print(50 not in list_a) # 부정문 추가 가능 (결과 반대로)
+
+# 리스트와 반복문 , 
+# for 반복변수 in 반복할 수 있는 자료 :
+  # 코드
+
+array = [273,32,103,57,52]
+for i in array :
+  print(i)
+
+for i in "안녕하세요" :
+  print(i)
+
+# 중첩 리스트 , 2차원 리스트 
+list_of_list = [
+  [1,2,3],
+  [4,5,6],
+  [7,[8,[9,10]]]
+]
+
+for row in list_of_list :
+  print(row)
+  for col in row :
+    print(col)
+   
+# 전개 연산자 , *
+list_a = [1,2,3]
+print(list_a)
+print(*list_a) # 리스트 그 자체가 아닌 , 1 2 3  # 리스트는 첫번째 인덱스 참조한다.
+
+print([list_a, list_a])
+
+
+
