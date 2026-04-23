@@ -1,0 +1,26 @@
+# 모듈 호출 하기 
+# 표준 모듈 : 파이썬 내장 라이브러리 
+# 외부 모듈 : 설치형 라이브러리
+# inport 모듈명
+# from 모듈명 import 가져오고 싶은 함수 또는 변수
+import math   # import 모듈명
+from math import sin, cos, tan, floor, ceil
+print( math.sin(90))   # 호출한 모듈에서 sin 함수 호출 ,  .(접근연산자 )
+print(math.cos(90))
+print(math.tan(90))
+print(math.floor(2.5))
+print(math.ceil(2.5))
+
+import math as m
+print(m.sin(1))
+
+# random 모듈
+import random
+
+print( random.random()) # 0,0 <= x <= 1.0 실수 사이의 (실수)난수 생성
+print(random.uniform(10,20)) # uniform(시작값, 끝값)
+print(random.randrange( 1, 10))  # randrange(시작값, 끝값)int로 반환 1 ~ 9 까지
+print(random.choice([10,24,5,20])) # choice([리스트]) , 리스트 내 랜덤 요소 1개 반환 
+print(random.shuffle([1,2,3,4,5])) # shuffle ([리스트]) , 리스트내 요소들을 랜덤 섞는다.
+print(random.sample([1,2,3,4,5], k=2))  # sample([리스트], k=개수)  , 리스트내 k개 램덤요소 바노한 
+# k = 2 : 키워드 매개변수 , k 라는 이름 갖는 매개변수에 대입 
