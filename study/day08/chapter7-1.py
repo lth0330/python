@@ -5,10 +5,10 @@ print( os.getcwd() )    # 현재 최상위 폴더
 print( os.listdir() )   # 현재 최상위 폴더의 내부 요소
 os.mkdir('hello')       # 폴더 생성 
 os.rmdir('hello')       # 폴더 삭제 
-with open( './day08/original.txt' , 'w') as file :
+with open( 'study/day08/original.txt' , 'w') as file :
     file.write( 'hello')
-os.rename( './day08/original.txt' , './day08/new.txt' )     # 파일명 변경 
-os.remove( './day08/new.txt' )  # 파일 삭제 
+os.rename( 'study/day08/original.txt' , 'study/day08/new.txt' )     # 파일명 변경 
+os.remove( 'study/day08/new.txt' )  # 파일 삭제 
 os.system( 'dir' )      # 시스템 명령어 실행    # 보안 문제 주의!
 
 # dateitem 모듈 
