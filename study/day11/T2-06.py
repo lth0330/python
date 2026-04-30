@@ -8,7 +8,12 @@ print(np.max(x))    # 최대값
 print(np.argmin(x)) # 최소값(인덱스) 위치
 print(np.argmax(x)) # 최대값(인덱스)위치
 print(np.ptp(x))    # 최대값 - 최소값
-print(np.sum(x))    # 합계
+print( np.sum( x ) )    # 합계
+print( np.mean( x ) )   # 평균 
+print( np.median( x ) ) # 중앙값 
+print( np.var( x ) )    # 분산 : 요소들의 흩어짐 정도
+print( np.std( x ) )    # 표준편차 : 분산의 양의 제곱근 
+print( np.sqrt( x ) )   # 루트
 
 
 
@@ -33,3 +38,7 @@ print(np.argmax(y))          # 최대값 위치
 print(np.argmin(y))          # 최소값 위치
 print(np.sum(y))
 print(np.mean(y))
+print( np.median( y ) )
+print( np.var( y ) )
+print( np.std( y ) )
+print( np.sqrt( y ) )

@@ -6,7 +6,7 @@ x = np.array([[1,2,3,], [4,5,6]])
 print(x.shape) # (2,3)
 
 #.dtype, 현재 
-x= np.array([1.0,2.0,3.0])
+x= np.array([1.0,2,3])
 print(x.dtype)
 
 # .size , 현재 배열내 모든 요소 수
