@@ -8,6 +8,7 @@
 import pandas as pd
 print( pd.__version__ ) # 3.0.2
 
+
 # series 
 # 1. 생성 
 x = [ 10 , 20 , 30 , 40 ]  # 리스트 
