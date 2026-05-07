@@ -51,6 +51,6 @@ plt.show()
 
 df = pd.DataFrame( data )
 # 1. 카운트플롯 .countplot( 판다스자료 , x='x축라벨(열이름)')
-sns.countplot( df , x = '평균 연령' )
+sns.countplot( df , x = '평균 연령' ,)
 # 2. 차트출력 
 plt.show( )
