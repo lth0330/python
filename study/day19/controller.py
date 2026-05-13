@@ -16,18 +16,21 @@ async def item( id: int ) :
 @router.get("/items")
 async def items( ) :
     return item_service.items()
-    
+ 
 # (3) POST 
+# { "id": 3 , "name" : "제로콜라" , "price" : 2000 }
 @router.post("/save")
-async def save( item:dict) :
-    return item_service.save()
+async def save( item: dict ) :
+    return item_service.save( item )
 
 # (4) PUT
+# { "id": 1 , "name" : "제로콜라" , "price" : 3000 }
 @router.put("/update")
-async def update( ) :
-    return "update"
+async def update( item: dict ) :
+    return item_service.update( item )
 
 # (5) DELETE 
 @router.delete("/delete")
-async def delete( ) :
-    return "delete"
+async def delete( id: int ) :
+    return item_service.delete( id )
+
