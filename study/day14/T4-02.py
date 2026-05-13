@@ -11,7 +11,6 @@ df = pd.read_csv('study/day14/data.csv',       # 파일 경로
                                    )   
 print(df)
 
-
 # 2. escel 파일 불러오기
 df = pd.read_excel(
     'study/day14/data.xlsx',
