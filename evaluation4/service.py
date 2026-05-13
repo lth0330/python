@@ -4,29 +4,29 @@ import time
 import pandas as pd
 import matplotlib.pyplot as plt 
 import koreanfont # 그래프 한글 꺠짐 방지
-#book_list=[]
-#for page in range(1 , 10) :
-# url = f' https://www.yes24.com/product/category/bestseller?categoryNumber=001&pageNumber={page}&pageSize=120'
-#
-# response = requests.get(url)
-#
-# soup = BeautifulSoup(response.text , "html.parser")
-# books = soup.select('#yesBestList > li')
-#
-# for book in books : 
-#    gd_name = book.select_one('.gd_name').get_text().strip()
-#    yes_b = book.select_one('.yes_b').get_text().strip()
-#    saleNum = book.select_one('.saleNum').get_text().strip()
-#    info_date = book.select_one('.info_date').get_text().strip()
-# 
-#    book_list.append({"제목": gd_name, "가격" : yes_b , "판매지수" :saleNum ,"출판년월" : info_date})
-#
-# time.sleep(2)
-#
-# df = pd.DataFrame(book_list)
+book_list=[]
+for page in range(1 , 10) :
+ url = f' https://www.yes24.com/product/category/bestseller?categoryNumber=001&pageNumber={page}&pageSize=120'
 
-# df.to_csv("evaluation4/data/book.csv",
-#         header=True)
+ response = requests.get(url)
+
+ soup = BeautifulSoup(response.text , "html.parser")
+ books = soup.select('#yesBestList > li')
+
+ for book in books : 
+    gd_name = book.select_one('.gd_name').get_text().strip()
+    yes_b = book.select_one('.yes_b').get_text().strip()
+    saleNum = book.select_one('.saleNum').get_text().strip()
+    info_date = book.select_one('.info_date').get_text().strip()
+ 
+    book_list.append({"제목": gd_name, "가격" : yes_b , "판매지수" :saleNum ,"출판년월" : info_date})
+
+ time.sleep(2)
+
+ df = pd.DataFrame(book_list)
+
+ df.to_csv("evaluation4/data/book.csv",
+         header=True)
 
 
 df = pd.read_csv('evaluation4/data/book.csv',
@@ -49,8 +49,6 @@ print(df['가격'].min())
 print(df['출판년'].value_counts().sort_index())
 
 
-# 나. 가격대별 도서 개수 출력
-# 0~1만원, 1~2만원처럼 가격을 구간으로 나눕니다.
 bins = [0, 10000, 20000, 30000, 40000, 50000, float('inf')]
 labels = ['0~1만원', '1~2만원', '2~3만원', '3~4만원', '4~5만원', '5만원 이상']
 
